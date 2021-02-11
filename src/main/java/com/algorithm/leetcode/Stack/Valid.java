@@ -4,6 +4,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Stack;
 
+/**
+ * 括号检测
+ */
 public class Valid {
     public static void main(String[] args) {
         Boolean solution = solution("()");
