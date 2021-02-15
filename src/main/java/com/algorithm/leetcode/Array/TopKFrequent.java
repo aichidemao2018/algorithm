@@ -13,5 +13,6 @@ public class TopKFrequent {
     public static int[] soultion(int[] nums, int k) {
         HashMap<Integer, Integer> map = new HashMap();
         map.getOrDefault(1, 0);
+        return null;
     }
 }

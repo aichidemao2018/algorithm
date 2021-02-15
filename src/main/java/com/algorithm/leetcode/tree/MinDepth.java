@@ -19,7 +19,10 @@ public class MinDepth {
             return 1;
         }
 
-        if (root.getLeft() != null)
+        if (root.getLeft() != null) {
 
+        }
+
+        return 1;
     }
 }
