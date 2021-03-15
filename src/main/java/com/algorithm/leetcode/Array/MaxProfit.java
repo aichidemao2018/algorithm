@@ -18,6 +18,7 @@ public class MaxProfit {
             } else if (prices[i] > min - max) {
                 max = prices[i] - min;
             }
+
         }
         return max;
     }
