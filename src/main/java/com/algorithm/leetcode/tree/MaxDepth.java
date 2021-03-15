@@ -1,7 +1,5 @@
 package com.algorithm.leetcode.tree;
 
-import com.algorithm.leetcode.TreeNode;
-
 public class MaxDepth {
     public static void main(String[] args) {
 

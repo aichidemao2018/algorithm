@@ -1,4 +1,4 @@
-package com.algorithm.leetcode;
+package com.algorithm.leetcode.tree;
 
 import lombok.Data;
 

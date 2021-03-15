@@ -1,7 +1,5 @@
 package com.algorithm.leetcode.tree;
 
-import com.algorithm.leetcode.TreeNode;
-
 /**
  * 最小生成树
  */
