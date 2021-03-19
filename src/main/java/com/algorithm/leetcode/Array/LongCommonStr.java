@@ -33,8 +33,10 @@ public class LongCommonStr {
         int length = str[0].length();
         int count = str.length;
 
+        //第一个字符串的长度
         for (int i = 0; i < length; i++) {
             char c = str[0].charAt(i);
+            //有几个字符串进行比较
             for (int j = 1; j < count; j++) {
                 if (str[j].charAt(i) != c) {
                     return str[0].substring(0, i);

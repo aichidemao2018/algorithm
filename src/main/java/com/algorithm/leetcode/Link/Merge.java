@@ -4,23 +4,23 @@ import java.util.Objects;
 
 public class Merge {
     public static void main(String[] args) {
-        LinkNode linkNode1 = new LinkNode(1);
-        LinkNode linkNode12 = new LinkNode(3);
+        ListNode listNode1 = new ListNode(1);
+        ListNode listNode12 = new ListNode(3);
 
-        LinkNode linkNode13 = new LinkNode(5);
+        ListNode listNode13 = new ListNode(5);
 
-        linkNode1.setNext(linkNode12);
-        linkNode12.setNext(linkNode13);
+        listNode1.setNext(listNode12);
+        listNode12.setNext(listNode13);
 
-        LinkNode linkNode21 = new LinkNode(2);
+        ListNode listNode21 = new ListNode(2);
 
-        LinkNode linkNode22 = new LinkNode(4);
+        ListNode listNode22 = new ListNode(4);
 
-        LinkNode linkNode23 = new LinkNode(6);
-        linkNode21.setNext(linkNode22);
-        linkNode22.setNext(linkNode23);
+        ListNode listNode23 = new ListNode(6);
+        listNode21.setNext(listNode22);
+        listNode22.setNext(listNode23);
 
-        LinkNode node = solution(linkNode1, linkNode21);
+        ListNode node = solution(listNode1, listNode21);
 
         while (Objects.nonNull(node.getValue())) {
             System.out.println(node.getValue());
@@ -30,7 +30,7 @@ public class Merge {
 
     }
 
-    public static LinkNode solution(LinkNode n1, LinkNode n2) {
+    public static ListNode solution(ListNode n1, ListNode n2) {
         if (n1 == null) {
             return n2;
         }
@@ -38,11 +38,11 @@ public class Merge {
             return n1;
         }
         if (n1.getValue() < n2.getValue()) {
-            LinkNode solution = solution(n1.getNext(), n2);
+            ListNode solution = solution(n1.getNext(), n2);
             n1.setNext(solution);
             return n1;
         } else {
-            LinkNode solution = solution(n1, n2.getNext());
+            ListNode solution = solution(n1, n2.getNext());
             n2.setNext(solution);
             return n2;
         }

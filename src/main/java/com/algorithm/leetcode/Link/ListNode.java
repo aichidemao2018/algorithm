@@ -3,16 +3,16 @@ package com.algorithm.leetcode.Link;
 import lombok.Data;
 
 @Data
-public class LinkNode {
+public class ListNode {
     private int index;
     private int value;
-    private LinkNode next;
+    private ListNode next;
 
-    public LinkNode(int value) {
+    public ListNode(int value) {
         this.value = value;
     }
 
-    public LinkNode(int value, LinkNode next) {
+    public ListNode(int value, ListNode next) {
         this.value = value;
         this.next = next;
     }

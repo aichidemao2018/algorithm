@@ -22,7 +22,6 @@ public class RemoveDuplicates {
                 i++;
                 num[i] = num[j];
             }
-
         }
         return i + 1;
     }

@@ -8,8 +8,8 @@ public class HasCycle {
 
     }
 
-    private Boolean solution(LinkNode head) {
-        Set<LinkNode> exists = new HashSet<>();
+    private Boolean solution(ListNode head) {
+        Set<ListNode> exists = new HashSet<>();
         while (head != null) {
 
             if (!exists.add(head)) {
@@ -19,4 +19,22 @@ public class HasCycle {
         }
         return false;
     }
+
+    private Boolean solution2(ListNode head) {
+        if (head == null || head.getNext() == null) {
+            return false;
+        }
+        ListNode slow = head;
+        ListNode fast = head.getNext();
+
+        while (slow != fast) {
+            if (fast == null || fast.getNext() == null) {
+                return false;
+            }
+            slow = slow.getNext();
+            fast = fast.getNext().getNext();
+        }
+        return true;
+    }
+
 }
