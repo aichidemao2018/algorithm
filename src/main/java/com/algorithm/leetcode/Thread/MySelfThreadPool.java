@@ -14,7 +14,7 @@ public class MySelfThreadPool {
 
     private final BlockingQueue<Runnable> taskQueue;//阻塞有序队列存放任务
 
-    private final Set<WorkerThread> workerThreads;
+    public final Set<WorkerThread> workerThreads;
 
     private int workNum;
 
