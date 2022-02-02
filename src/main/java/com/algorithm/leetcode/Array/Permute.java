@@ -1,12 +1,16 @@
 package com.algorithm.leetcode.Array;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 /**
  * 全排列
  */
 public class Permute {
+
+    private static List<List<Integer>> res = new ArrayList<>();
+
     public static void main(String[] args) {
         int[] nums = {1, 2, 3};
         Permute solution = new Permute();
@@ -41,6 +45,38 @@ public class Permute {
             temp.remove(temp.size() - 1);
         }
 
+    }
+
+    private void backtrack(int[] nums, LinkedList<Integer> road) {
+        if (nums.length == road.size()) {
+            res.add(road);
+            return;
+        }
+
+        for (int num : nums) {
+            if (road.contains(num)) {
+                continue;
+            }
+            road.add(num);
+            backtrack(nums, road);
+            road.removeLast();
+        }
+    }
+
+    private void backtrack(int[] nums, LinkedList<Integer> road, int start) {
+        if (nums.length == start) {
+            res.add(road);
+            return;
+        }
+
+        for (int i = start; i < nums.length; i++) {
+            if (road.contains(nums[i])) {
+                continue;
+            }
+            road.add(nums[i]);
+            backtrack(nums, road, i + 1);
+            road.removeLast();
+        }
     }
 
 }

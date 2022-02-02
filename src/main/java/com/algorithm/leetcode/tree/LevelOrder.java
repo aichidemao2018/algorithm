@@ -21,6 +21,7 @@ public class LevelOrder {
             queues.add(root);
         }
         while (!queues.isEmpty()) {
+            //记录每一层的节点 防止层数 越界
             int length = queues.size();
             List<Integer> level = new ArrayList<>();
             for (int i = 0; i < length; i++) {
