@@ -1,4 +1,4 @@
-package com.algorithm.leetcode.Array;
+package com.algorithm.leetcode.huisu;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -6,6 +6,7 @@ import java.util.List;
 
 /**
  * 全排列
+ * https://leetcode-cn.com/problems/permutations/solution/hui-su-suan-fa-python-dai-ma-java-dai-ma-by-liweiw/
  */
 public class Permute {
 

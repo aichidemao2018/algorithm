@@ -21,6 +21,7 @@ public class HasCycle {
     }
 
     private Boolean solution2(ListNode head) {
+        //如果只有两个节点 即 不是 环
         if (head == null || head.getNext() == null) {
             return false;
         }
