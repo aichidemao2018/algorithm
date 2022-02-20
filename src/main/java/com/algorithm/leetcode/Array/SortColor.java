@@ -20,8 +20,19 @@ public class SortColor {
 
     }
 
+    /**
+     * 单指针
+     * 两次循环
+     * 第一次 移动0
+     * 第二次 移动1
+     * 最后 2在最右侧
+     *
+     * @param nums
+     * @return
+     */
     public static int[] sortColors(int[] nums) {
         int n = nums.length;
+        //记录 当前移动的初始位置
         int ptr = 0;
 
         for (int i = 0; i < n; ++i) {
@@ -48,6 +59,14 @@ public class SortColor {
     }
 
 
+    /**
+     * 双指针
+     * 一个将2移动到最右侧
+     * 一个将0移动到最左侧
+     *
+     * @param nums
+     * @return
+     */
     public static int[] sortColors2(int[] nums) {
         int n = nums.length;
 

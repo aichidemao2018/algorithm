@@ -1,7 +1,7 @@
 package com.algorithm.leetcode.Array;
 
 /**
- * 移动9
+ * 移动0
  */
 public class MoveZeroes {
     public void moveZeroes(int[] nums) {
